@@ -160,7 +160,7 @@ button:focus {
   font-size: 14px;
   line-height: 1.14;
   color: var(--third-text-color);
-  transition: color var(--trsansition-time) var(--cubic);
+  transition: color var(--transition-time) var(--cubic);
 }
 
 /*-----------------------------------------------------ГЕРОЙ-------------------------------------------------------*/
