@@ -775,6 +775,7 @@ footer {
   align-items: center;
   justify-content: center;
   position: absolute;
+  outline: none;
   top: 8px;
   right: 8px;
   width: 30px;
@@ -786,24 +787,37 @@ footer {
   transition: outline var(--transition-time) var(--cubic),
     color var(--transition-time) var(--cubic);
 }
-.modal-close:hover,
 .modal-close:focus {
-  color: var(--btn-color);
+  outline: 1px solid var(--btn-color);
 }
+.modal-close:hover,
 .modal-close:focus {
   outline: var(--btn-color);
 }
+.modal-close:hover .close-icon,
+.modal-close:focus .close-icon {
+  fill: var(--btn-color);
+}
+
 .close-icon {
-  fill: var(--second-text-color);
+  fill: currentColor;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: transform var(--transition-time) var(--cubic);
 }
+
 .is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+}
+.modal-form-field {
+  margin-bottom: 10px;
+}
+.icon-wrap {
+  position: relative;
 }
 .title-modal {
   font-weight: bold;
@@ -818,13 +832,32 @@ footer {
 .modal-input {
   width: 100%;
   height: 40px;
+  padding: 0 42px;
+  line-height: 1.25;
   left: 616px;
   top: 282px;
-  margin-bottom: 10px;
   background-color: transparent;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   color: var(--second-text-color);
+  transition: border-color var(--transition-time) var(--cubic),
+    outline var(--transition-time) var(--cubic);
+}
+.modal-input:focus {
+  outline: 1px solid var(--btn-color);
+}
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-left: 12px;
+  transform: translateY(-50%);
+  fill: currentColor;
+  transition: fill var(--transition-time) var(--cubic),
+    outline var(--transition-time) var(--cubic);
+}
+.modal-input:focus + .input-icon {
+  fill: var(--btn-color);
 }
 .modal-input-comment {
   margin-bottom: 20px;
@@ -847,7 +880,6 @@ footer {
   color: rgba(117, 117, 117, 0.5);
 }
 .modal-input-text {
-  position: absolute;
   top: 0;
   left: 0;
 
