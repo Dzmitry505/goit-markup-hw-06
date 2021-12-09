@@ -541,6 +541,71 @@ footer {
 .footer-social-icon {
   fill: var(--first-color);
 }
+.spam-box {
+  margin-left: auto;
+}
+.spam-section {
+  display: flex;
+}
+.spam-title {
+  margin-bottom: 20px;
+  display: flex;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--first-color);
+}
+.spam-mail {
+  width: 358px;
+  height: 50px;
+  margin: 0px;
+  padding: 0px;
+  margin-right: 12px;
+  padding-left: 16px;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  color: var(--eighth-footer-color);
+}
+.btn-spam {
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+
+  width: 200px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+
+  justify-content: center;
+  align-items: center;
+
+  letter-spacing: 0.06em;
+  color: var(--first-color);
+  background: var(--btn-color);
+  border: 0;
+  border-radius: 4px;
+
+  transition: background-color var(--transition-time) var(--cubic);
+}
+.btn-spam:hover,
+.btn-spam:focus {
+  background-color: #188ce8;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
+}
+
+.spam-icon {
+  fill: currentColor;
+  margin-left: 10px;
+}
 /*-------------------------------------------отдельно к портфолио----------------------------------------------------------------------*/
 .main-btn-filter {
   transition: background-color var(--transition-time) var(--cubic),
@@ -703,7 +768,7 @@ footer {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transform: scale(1) rotate(0) translate(-50%, -50%);
-  transition: transform 250ms;
+  transition: transform var(--transition-time);
 }
 .modal-close {
   display: flex;
@@ -717,6 +782,16 @@ footer {
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+
+  transition: outline var(--transition-time) var(--cubic),
+    color var(--transition-time) var(--cubic);
+}
+.modal-close:hover,
+.modal-close:focus {
+  color: var(--btn-color);
+}
+.modal-close:focus {
+  outline: var(--btn-color);
 }
 .close-icon {
   fill: var(--second-text-color);
@@ -772,6 +847,10 @@ footer {
   color: rgba(117, 117, 117, 0.5);
 }
 .modal-input-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+
   display: block;
   margin-bottom: 4px;
   font-weight: normal;
