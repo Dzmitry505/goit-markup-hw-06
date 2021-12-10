@@ -476,9 +476,22 @@
             </svg>
             </div>
             </div>
-        
+        <div class="modal-form-field">
         <label for="user-comment" class="modal-input-text">Комментарий</label>
             <textarea name="user-comment" class="modal-input-comment" placeholder="Введите текст" id="user-comment"></textarea>
+            </div>
+            <div class="modal-form-field">
+                <input type="checkbox" name="policy" id="modal-check" class="modal-check visually-hidden" />
+                <label for="modal-check" class="modal-check-text">
+                    <span>
+                    <svg class="icon-check" width="11" height="8">
+                        <use href="./img/icon.svg#icon-vector-check"></use>
+                    </svg>
+                </span>Соглашаюсь с рассылкой и принимаю
+            <a href="" class="modal-check-link">Условия договора</a>
+        </label>
+
+            </div>
         
             <button type="submit" class="btn send-btn">Отправить</button>
             </form>
