@@ -198,7 +198,7 @@ button:focus {
   margin-right: auto;
 }
 
-.btn-hero {
+.btn {
   font-family: inherit;
   padding: 10px 32px;
 
@@ -217,8 +217,8 @@ button:focus {
   border-radius: 5px;
   border: none;
 }
-.btn-hero:hover,
-.btn-filter:focus {
+.btn:hover,
+.btn:focus {
   background: #188ce8;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
@@ -760,7 +760,7 @@ footer {
   top: 50%;
   left: 50%;
   padding: 40px;
-  transition: transform var(--transition-time) var(--cubic);
+
   width: 528px;
   min-height: 581px;
   background-color: var(--first-color);
@@ -768,7 +768,7 @@ footer {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transform: scale(1) rotate(0) translate(-50%, -50%);
-  transition: transform var(--transition-time);
+  transition: transform var(--transition-time) var(--cubic);
 }
 .modal-close {
   display: flex;
@@ -783,29 +783,26 @@ footer {
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-
   transition: outline var(--transition-time) var(--cubic),
     color var(--transition-time) var(--cubic);
 }
 .modal-close:focus {
   outline: 1px solid var(--btn-color);
 }
-.modal-close:hover,
-.modal-close:focus {
+.modal-close:hover {
   outline: var(--btn-color);
 }
-.modal-close:hover .close-icon,
-.modal-close:focus .close-icon {
-  fill: var(--btn-color);
-}
-
 .close-icon {
   fill: currentColor;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: transform var(--transition-time) var(--cubic);
+  transition: fill var(--transition-time) var(--cubic);
+}
+.modal-close:hover .close-icon,
+.modal-close:focus .close-icon {
+  fill: var(--btn-color);
 }
 
 .is-hidden {
@@ -870,6 +867,11 @@ footer {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
+  transition: border-color var(--transition-time) var(--cubic),
+    outline var(--transition-time) var(--cubic);
+}
+.modal-input-comment:focus {
+  outline: 1px solid var(--btn-color);
 }
 .modal-input-comment ::placeholder {
   font-weight: normal;
@@ -892,4 +894,10 @@ footer {
   letter-spacing: 0.01em;
 
   color: var(--third-text-color);
+}
+.send-btn {
+  display: flex;
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
 }
